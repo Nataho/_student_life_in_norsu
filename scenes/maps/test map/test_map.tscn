@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cswrp4q78lfci"]
+
+[ext_resource type="Script" uid="uid://cra7ise3u1p88" path="res://scenes/maps/test map/test_map.gd" id="1_d67s4"]
+[ext_resource type="Texture2D" uid="uid://c052hcwvuo3c5" path="res://assets/photos/test/mario.png" id="2_d67s4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjxos"]
+albedo_color = Color(1, 0.40078, 0.755868, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mjxos"]
+material = SubResource("StandardMaterial3D_mjxos")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d67s4"]
+
+[node name="TestMap" type="Node3D"]
+script = ExtResource("1_d67s4")
+cameraDistance = 3
+
+[node name="mainCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24572, -7.66506)
+
+[node name="environment" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49646, 1.37645, -0.369199)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5983, 1.37645, -0.369199)
+
+[node name="objects" type="Node3D" parent="environment"]
+
+[node name="object" type="MeshInstance3D" parent="environment/objects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.888914, 0.697853, -1.27198)
+gi_mode = 2
+mesh = SubResource("BoxMesh_mjxos")
+skeleton = NodePath("../..")
+
+[node name="floor" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(5.04992, 0, 0, 0, 5.04992, 0, 0, 0, 5.04992, 0, 0, 0)
+mesh = SubResource("PlaneMesh_d67s4")
+skeleton = NodePath("../..")
+
+[node name="player" type="Sprite3D" parent="."]
+transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 0, 0.387, 0)
+texture = ExtResource("2_d67s4")

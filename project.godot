@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Student Life In Norsu"
+run/main_scene="uid://dnped17r3n3q3"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+DEBUG="*res://scenes/debug/debug.tscn"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Student Life In Norsu"
+
+[file_customization]
+
+folder_colors={
+"res://scenes/debug/": "purple",
+"res://scripts/static/": "red"
+}
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.web="mobile"
+anti_aliasing/quality/screen_space_aa=1

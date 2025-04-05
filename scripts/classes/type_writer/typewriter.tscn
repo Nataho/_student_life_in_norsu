@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjdp4hbp57pw6"]
+
+[ext_resource type="Script" uid="uid://drqr6si6gtct3" path="res://scripts/classes/type_writer/type_writer.gd" id="1_0ev0q"]
+
+[node name="typewriter" type="Node"]
+script = ExtResource("1_0ev0q")

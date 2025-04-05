@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dkvdl7mors3be"]
+
+[ext_resource type="FontFile" uid="uid://dd1ogfjvgll2w" path="res://assets/fonts/Luckymoon 400.ttf" id="1_qyl5n"]
+
+[resource]
+font = ExtResource("1_qyl5n")
+font_size = 80

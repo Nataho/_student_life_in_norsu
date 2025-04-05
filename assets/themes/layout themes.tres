@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cxlnk3j61bvcy"]
+
+[ext_resource type="FontFile" uid="uid://cux3stergckpk" path="res://assets/fonts/DIARIO_DE_ANDY 400.otf" id="1_07lkj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yatgt"]
+bg_color = Color(0, 0, 0, 0.67451)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[resource]
+Button/font_sizes/font_size = 129
+Button/fonts/font = ExtResource("1_07lkj")
+Panel/styles/panel = SubResource("StyleBoxFlat_yatgt")

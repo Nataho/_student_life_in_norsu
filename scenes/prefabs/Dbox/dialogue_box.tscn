@@ -1,0 +1,345 @@
+[gd_scene load_steps=7 format=3 uid="uid://momykex6mros"]
+
+[ext_resource type="Script" uid="uid://4pkj5x54hpwj" path="res://scenes/prefabs/Dbox/dialogue_box.gd" id="1_rl5qi"]
+[ext_resource type="Texture2D" uid="uid://cccyvo1n44ijg" path="res://icon.svg" id="2_k2in0"]
+[ext_resource type="Theme" uid="uid://cxlnk3j61bvcy" path="res://assets/themes/layout themes.tres" id="3_es6tl"]
+[ext_resource type="LabelSettings" uid="uid://dkvdl7mors3be" path="res://assets/fonts/label_settings/dialogue_box.tres" id="3_yatgt"]
+[ext_resource type="FontFile" uid="uid://dd1ogfjvgll2w" path="res://assets/fonts/Luckymoon 400.ttf" id="4_ld8ck"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_es6tl"]
+font = ExtResource("4_ld8ck")
+font_size = 80
+font_color = Color(1, 1, 1, 0)
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_rl5qi")
+metadata/_edit_horizontal_guides_ = [1031.0, 1403.0, 1217.0, 1124.0, 1310.0, 1171.0, 1263.0]
+
+[node name="test" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.5
+offset_top = -70.0
+offset_right = 230.5
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 96
+text = "test"
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1405, 1242)
+rotation = -6.2413
+texture = ExtResource("2_k2in0")
+offset = Vector2(-33.63, -50.705)
+
+[node name="Box" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -405.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="background" type="Panel" parent="Box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 384.0
+offset_top = -2.0
+offset_right = -384.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.997828, 1.00388)
+theme = ExtResource("3_es6tl")
+
+[node name="1 line" type="Control" parent="Box/background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="size-1" type="Label" parent="Box/background/1 line"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -36.0
+offset_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_es6tl")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dialogue" type="Label" parent="Box/background/1 line/size-1"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_yatgt")
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Panel" type="Panel" parent="Box/background/1 line/size-1/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="2 lines" type="Control" parent="Box/background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="size-1" type="Label" parent="Box/background/2 lines"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -69.4444
+offset_right = 0.5
+offset_bottom = 10.5556
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_es6tl")
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dialogue" type="Label" parent="Box/background/2 lines/size-1"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_yatgt")
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Panel" type="Panel" parent="Box/background/2 lines/size-1/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="size-2" type="Label" parent="Box/background/2 lines"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = 3.2735
+offset_right = 0.5
+offset_bottom = 83.2735
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_es6tl")
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dialogue" type="Label" parent="Box/background/2 lines/size-2"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_yatgt")
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Panel" type="Panel" parent="Box/background/2 lines/size-2/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="3 lines" type="Control" parent="Box/background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="size-1" type="Label" parent="Box/background/3 lines"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -110.286
+offset_right = 0.5
+offset_bottom = -30.286
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_es6tl")
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dialogue" type="Label" parent="Box/background/3 lines/size-1"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_yatgt")
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Panel" type="Panel" parent="Box/background/3 lines/size-1/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="size-2" type="Label" parent="Box/background/3 lines"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -35.5759
+offset_right = 0.5
+offset_bottom = 44.4241
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_es6tl")
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dialogue" type="Label" parent="Box/background/3 lines/size-2"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_yatgt")
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Panel" type="Panel" parent="Box/background/3 lines/size-2/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="size-3" type="Label" parent="Box/background/3 lines"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = 42.1227
+offset_right = 0.5
+offset_bottom = 122.123
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_es6tl")
+vertical_alignment = 1
+uppercase = true
+
+[node name="Dialogue" type="Label" parent="Box/background/3 lines/size-3"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("3_yatgt")
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Panel" type="Panel" parent="Box/background/3 lines/size-3/Dialogue"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="indicator" type="ColorRect" parent="Box/background"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.2997
+offset_top = -61.1905
+offset_right = -48.2997
+offset_bottom = -21.1905
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(1, 1, 1, 0.482353)
+
+[connection signal="pressed" from="test" to="." method="next"]
