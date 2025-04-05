@@ -1,7 +1,6 @@
 #extends Node
 class_name STORY
 
-
 #parameters to consider
 #["type if box"] = Dialogue Box("DBox") / Bubble Box("BBox"); this will not be case sensitive.
 

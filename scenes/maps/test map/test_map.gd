@@ -1,18 +1,15 @@
 extends Node3D
 
 @onready var player: Sprite3D = $player
-@onready var main_cam: Camera3D = $mainCam
 
 @export var SPEED := 100.0
-@export_group("camera")
-@export var cameraDistance := 50
-#func _ready() -> void:
 func _process(delta: float) -> void:
-	cameraMovement()
 	playerMovement(delta)
 
+##variable for player rotation in relation to direction
+var directionX = 0 
 
-var directionX = 0 #variable for player rotation
+##handles player movement
 func playerMovement(delta):
 	
 	var speed = (SPEED/50)*delta
@@ -32,14 +29,3 @@ func playerMovement(delta):
 	var playerRot = player.rotation_degrees.y
 	playerRot = lerpf(playerRot,180*directionX,0.2)
 	player.rotation_degrees.y = playerRot
-
-#handle camera movement
-func cameraMovement():
-	var camPos := main_cam.position
-	var playerPos := player.position
-	var space = playerPos.z + cameraDistance
-	
-	camPos.x = lerpf(camPos.x, playerPos.x, 0.05)
-	camPos.z = lerp(camPos.z, space, 0.05)
-	
-	main_cam.position = camPos

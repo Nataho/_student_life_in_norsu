@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cswrp4q78lfci"]
+[gd_scene load_steps=7 format=3 uid="uid://cswrp4q78lfci"]
 
 [ext_resource type="Script" uid="uid://cra7ise3u1p88" path="res://scenes/maps/test map/test_map.gd" id="1_d67s4"]
 [ext_resource type="Texture2D" uid="uid://cpqd0643h7254" path="res://assets/photos/test/practice_girl.png" id="2_d67s4"]
+[ext_resource type="PackedScene" uid="uid://cvpoun8sb1f8u" path="res://scripts/classes/maps/maps.tscn" id="3_jn8y5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjxos"]
 albedo_color = Color(1, 0.40078, 0.755868, 1)
@@ -13,33 +14,32 @@ material = SubResource("StandardMaterial3D_mjxos")
 
 [node name="TestMap" type="Node3D"]
 script = ExtResource("1_d67s4")
-cameraDistance = 3
-
-[node name="mainCam" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24572, -7.66506)
 
 [node name="player" type="Sprite3D" parent="."]
 transform = Transform3D(1.97, 0, 0, 0, 1.97, 0, 0, 0, 1.97, 0, 1.42987, 0)
 texture_filter = 2
 texture = ExtResource("2_d67s4")
 
-[node name="environment" type="Node3D" parent="."]
+[node name="Maps" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_jn8y5")]
+player = NodePath("../player")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="environment"]
+[node name="environment" type="Node3D" parent="Maps"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Maps/environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49646, 1.37645, -0.369199)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="environment"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Maps/environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5983, 1.37645, -0.369199)
 
-[node name="objects" type="Node3D" parent="environment"]
+[node name="objects" type="Node3D" parent="Maps/environment"]
 
-[node name="object" type="MeshInstance3D" parent="environment/objects"]
+[node name="object" type="MeshInstance3D" parent="Maps/environment/objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.888914, 0.697853, -1.27198)
 gi_mode = 2
 mesh = SubResource("BoxMesh_mjxos")
 skeleton = NodePath("../..")
 
-[node name="floor" type="MeshInstance3D" parent="environment"]
+[node name="floor" type="MeshInstance3D" parent="Maps/environment"]
 transform = Transform3D(5.04992, 0, 0, 0, 5.04992, 0, 0, 0, 5.04992, 0, 0, 0)
 mesh = SubResource("PlaneMesh_d67s4")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")

@@ -58,18 +58,21 @@ grow_vertical = 2
 theme_override_constants/separation = 45
 
 [node name="play" parent="UI/VBoxContainer" instance=ExtResource("2_4xxp1")]
+texture_filter = 6
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 text = "play"
 upperCase = true
 
 [node name="debug" parent="UI/VBoxContainer" instance=ExtResource("2_4xxp1")]
+texture_filter = 6
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 text = "debug"
 upperCase = true
 
 [node name="quit" parent="UI/VBoxContainer" instance=ExtResource("2_4xxp1")]
+texture_filter = 6
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 2
 text = "quit"

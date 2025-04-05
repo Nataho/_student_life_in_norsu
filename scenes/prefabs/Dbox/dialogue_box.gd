@@ -11,18 +11,6 @@ class_name DBOX
 
 var dialogue =  STORY._testDialogue
 
-#var presets = {
-	##"1 line" :[125,""],
-	##"2 lines": [100,""],
-	##"3 lines": [75,""],
-	##"4 lines": [50,""],
-	#"1 line": [54],
-	#"2 lines": [54],
-	#"3 lines": [54],
-	#"4 lines": [54],
-	#"center": null
-#}
-
 var dIndex = 0
 var typeWriter:TYPEWRITER = TYPEWRITER.new(100)
 var startTypeWriter:TYPEWRITER = TYPEWRITER.new(1, false, true)
