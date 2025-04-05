@@ -19,10 +19,10 @@ func playerMovement(delta):
 	
 	if Input.is_action_pressed("ui_left"):
 		player.position.x -= speed
-		directionX = -1
+		directionX = 0
 	if Input.is_action_pressed("ui_right"):
 		player.position.x += speed
-		directionX = 0
+		directionX = 1
 	
 	if Input.is_action_pressed("ui_up"):
 		player.position.z -= speed

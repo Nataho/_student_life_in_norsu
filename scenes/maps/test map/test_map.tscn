@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cswrp4q78lfci"]
 
 [ext_resource type="Script" uid="uid://cra7ise3u1p88" path="res://scenes/maps/test map/test_map.gd" id="1_d67s4"]
-[ext_resource type="Texture2D" uid="uid://c052hcwvuo3c5" path="res://assets/photos/test/mario.png" id="2_d67s4"]
+[ext_resource type="Texture2D" uid="uid://cpqd0643h7254" path="res://assets/photos/test/practice_girl.png" id="2_d67s4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjxos"]
 albedo_color = Color(1, 0.40078, 0.755868, 1)
@@ -17,6 +17,11 @@ cameraDistance = 3
 
 [node name="mainCam" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24572, -7.66506)
+
+[node name="player" type="Sprite3D" parent="."]
+transform = Transform3D(1.97, 0, 0, 0, 1.97, 0, 0, 0, 1.97, 0, 1.42987, 0)
+texture_filter = 2
+texture = ExtResource("2_d67s4")
 
 [node name="environment" type="Node3D" parent="."]
 
@@ -38,7 +43,3 @@ skeleton = NodePath("../..")
 transform = Transform3D(5.04992, 0, 0, 0, 5.04992, 0, 0, 0, 5.04992, 0, 0, 0)
 mesh = SubResource("PlaneMesh_d67s4")
 skeleton = NodePath("../..")
-
-[node name="player" type="Sprite3D" parent="."]
-transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 0, 0.387, 0)
-texture = ExtResource("2_d67s4")
