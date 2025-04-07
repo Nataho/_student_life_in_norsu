@@ -12,8 +12,8 @@ class_name DBOX
 var dialogue =  STORY._testDialogue
 
 var dIndex = 0
-var typeWriter:TYPEWRITER = TYPEWRITER.new(100)
-var startTypeWriter:TYPEWRITER = TYPEWRITER.new(1, false, true)
+var typeWriter := TYPEWRITER.new(100)
+var startTypeWriter := TYPEWRITER.new(1, false, true)
 
 func _ready() -> void:
 	WINDOW.set_resolution(WINDOW.RESOLUTION_1280X720)

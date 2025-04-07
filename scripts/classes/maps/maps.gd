@@ -1,18 +1,20 @@
 extends Node3D
+##class
 class_name MAPS
 
 @export_group("player settings")
+##This node is a prerequisite for this class, it is used to get camera input from the node.
+##it doesn't have to be a player, it just needs something to cling on to
 @export var player:Node3D
 
 @export_group("camera settings", "camera")
-@export var cameraDistance := 3.0
-@export var cameraHeight := 1.5
-@export_range(0.01,1.0,0.01) var cameraSmoothSpeed = 0.05
+@export var cameraDistance := 3.0 ##z axis distance of camera
+@export var cameraHeight := 1.5 ##y axis distance of camera
+@export_range(0.01,1.0,0.01) var cameraSmoothSpeed = 0.05 ##smoothness of camera
 #@export var cameraSmoothSpeed := 0.05
 @export var camera_follows_player := true
 
 @onready var main_cam: Camera3D = $mainCam
-
 #assets will be loaded here
 #DO NOT CHANGE ANYTHING IN HERE
 

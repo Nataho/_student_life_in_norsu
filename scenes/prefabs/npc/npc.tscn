@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd1pei3sbksvh"]
+
+[ext_resource type="Script" uid="uid://bxhybdwoabqe8" path="res://scenes/prefabs/npc/npc.gd" id="2_4atv3"]
+
+[node name="NPC" type="AnimatedSprite3D"]
+texture_filter = 2
+autoplay = "default"
+script = ExtResource("2_4atv3")

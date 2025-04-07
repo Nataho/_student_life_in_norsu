@@ -1,8 +1,116 @@
-[gd_scene load_steps=7 format=3 uid="uid://cswrp4q78lfci"]
+[gd_scene load_steps=27 format=3 uid="uid://cswrp4q78lfci"]
 
 [ext_resource type="Script" uid="uid://cra7ise3u1p88" path="res://scenes/maps/test map/test_map.gd" id="1_d67s4"]
 [ext_resource type="Texture2D" uid="uid://cpqd0643h7254" path="res://assets/photos/test/practice_girl.png" id="2_d67s4"]
 [ext_resource type="PackedScene" uid="uid://cvpoun8sb1f8u" path="res://scripts/classes/maps/maps.tscn" id="3_jn8y5"]
+[ext_resource type="PackedScene" uid="uid://dd1pei3sbksvh" path="res://scenes/prefabs/npc/npc.tscn" id="3_x13l4"]
+[ext_resource type="Texture2D" uid="uid://cavu8bs1v5b5b" path="res://assets/photos/test/anim_spritesheet_test.png" id="4_xe8m3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x13l4"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(0, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe8m3"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(56, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3i3k"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(112, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oamwu"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(168, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1tfv"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(224, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw635"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(280, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq310"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(336, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynfmv"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(392, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrk0d"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(448, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgghb"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(504, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs0n6"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(560, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8y6s"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(616, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg6ug"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(672, 0, 48, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gd4g"]
+atlas = ExtResource("4_xe8m3")
+region = Rect2(728, 0, 48, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3i3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x13l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xe8m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3i3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oamwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1tfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw635")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq310")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynfmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrk0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgghb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs0n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8y6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg6ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gd4g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjxos"]
 albedo_color = Color(1, 0.40078, 0.755868, 1)
@@ -12,16 +120,59 @@ material = SubResource("StandardMaterial3D_mjxos")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d67s4"]
 
+[sub_resource type="Animation" id="Animation_c3i3k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Maps/environment/objects/object:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.888914, 0.697853, -1.27198)]
+}
+
+[sub_resource type="Animation" id="Animation_xe8m3"]
+resource_name = "move block"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Maps/environment/objects/object:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.888914, 0.697853, -1.27198), Vector3(1.94865, 0.697853, -1.27198)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oamwu"]
+_data = {
+&"RESET": SubResource("Animation_c3i3k"),
+&"move block": SubResource("Animation_xe8m3")
+}
+
 [node name="TestMap" type="Node3D"]
 script = ExtResource("1_d67s4")
 
 [node name="player" type="Sprite3D" parent="."]
-transform = Transform3D(1.97, 0, 0, 0, 1.97, 0, 0, 0, 1.97, 0, 1.42987, 0)
+transform = Transform3D(1.97, 0, 0, 0, 1.97, 0, 0, 0, 1.97, -1.09201, 1.42987, 0)
 texture_filter = 2
 texture = ExtResource("2_d67s4")
 
+[node name="NPC" parent="." instance=ExtResource("3_x13l4")]
+transform = Transform3D(1.97, 0, 0, 0, 1.97, 0, 0, 0, 1.97, 0.882956, 1.42987, -2.95956)
+sprite_frames = SubResource("SpriteFrames_c3i3k")
+frame_progress = 0.564755
+
 [node name="Maps" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_jn8y5")]
 player = NodePath("../player")
+cameraDistance = 2.705
+cameraHeight = 1.67
 
 [node name="environment" type="Node3D" parent="Maps"]
 
@@ -43,3 +194,14 @@ skeleton = NodePath("../..")
 transform = Transform3D(5.04992, 0, 0, 0, 5.04992, 0, 0, 0, 5.04992, 0, 0, 0)
 mesh = SubResource("PlaneMesh_d67s4")
 skeleton = NodePath("../../..")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_oamwu")
+}
+
+[connection signal="timeout" from="Timer" to="." method="toggle_npc_movement"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnped17r3n3q3"]
+[gd_scene load_steps=9 format=3 uid="uid://dnped17r3n3q3"]
 
 [ext_resource type="Script" uid="uid://b85eyocvjkq4r" path="res://scenes/splash/splash.gd" id="1_cwtag"]
 [ext_resource type="FontFile" uid="uid://cux3stergckpk" path="res://assets/fonts/DIARIO_DE_ANDY 400.otf" id="1_i52gs"]
+[ext_resource type="VideoStream" uid="uid://c81wm4602w5s5" path="res://assets/videos/splash.ogv" id="2_y4437"]
+[ext_resource type="AudioStream" uid="uid://w4h3fvicw6wn" path="res://assets/audio/splash.mp3" id="4_wwhxh"]
 
 [sub_resource type="Animation" id="Animation_y4437"]
 length = 0.001
@@ -179,6 +181,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_wwhxh")
 }
 
+[node name="video" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_y4437")
+autoplay = true
+
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
 layout_mode = 1
@@ -236,3 +248,8 @@ label_settings = SubResource("LabelSettings_cwtag")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wwhxh")
+pitch_scale = 1.6
+autoplay = true
